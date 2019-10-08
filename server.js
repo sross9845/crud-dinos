@@ -14,6 +14,7 @@ app.get('/', function(req,res){
 })
 //mount at dinosaurs
 app.use('/dinosaurs', require('./routes/dinosaurs'));
+app.use('/cryptids', require('./routes/cryptids'));
 
 app.listen(3000, function(){
     console.log("Server listening on port 3000 yo")

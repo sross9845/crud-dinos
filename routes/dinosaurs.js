@@ -7,7 +7,7 @@ router.get('/', function(req,res){
     var dinos = fs.readFileSync('./dinosaurs.json')
     //turn it back into a json??? or readable
     var dinoData = JSON.parse(dinos)
-    res.json(dinoData)
+    res.render('dinosaurs/index', {dinos: dinoData});
 });
 
 module.exports = router;

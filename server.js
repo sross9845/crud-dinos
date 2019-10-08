@@ -9,7 +9,7 @@ app.use(ejsLayouts);
 app.use(express.static('static'))
 
 app.get('/', function(req,res){
-    res.send("You hit the home page yo")
+    res.render('home');
 })
 //mount at dinosaurs
 app.use('/dinosaurs', require('./routes/dinosaurs'));

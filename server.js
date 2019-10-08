@@ -11,6 +11,8 @@ app.use(express.static('static'))
 app.get('/', function(req,res){
     res.send("You hit the home page yo")
 })
+//mount at dinosaurs
+app.use('/dinosaurs', require('./routes/dinosaurs'));
 
 app.listen(3000, function(){
     console.log("Server listening on port 3000 yo")

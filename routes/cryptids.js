@@ -48,7 +48,7 @@ router.get('/:id', function(req,res){
   var index = parseInt(req.params.id);
   var cryptid = fs.readFileSync('./cryptids.json');
   var cryptidData = JSON.parse(cryptid);
-  res.render('cryptids/show', {cryptid: cryptidData[index]});
+  res.render('cryptids/show', {cryptid: cryptidData[index], index});
 });
 
 module.exports = router;
